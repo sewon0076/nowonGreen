@@ -1,0 +1,33 @@
+<main>
+    <div class="notice_write sec_wrap">
+        <a href="notice"><h2>NOTICE</h2></a>
+        <div class="notice_write_wrap p100_50">
+            <form action="/notice_write_info" method="post">
+                <table class="grayBg">
+                    <tr>
+                        <td colspan="2">*는 필수 입력사항입니다</td>
+                    </tr>
+                    <tr>
+                        <td>*ID</td>
+                        <td><input type="text" name="userId" /></td>
+                    </tr>
+                    <tr>
+                        <td>PASSWORD</td>
+                        <td><input type="password" name="userPw" /></td>
+                    </tr>
+                    <tr>
+                        <td>*제목</td>
+                        <td><input type="text" name="title" /></td>
+                    </tr>
+                    <tr>
+                        <td>*내용</td>
+                        <td><textarea name="content" id="" cols="100" rows="10"></textarea></td>
+                    </tr>
+                </table>
+                <div class="button_wrap">
+                    <input class="button" type="submit" value="SUBMIT" />
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

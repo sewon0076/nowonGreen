@@ -1,0 +1,39 @@
+.notice_write {
+    margin-top: 50px;
+}
+.notice_write h2 {
+    text-align: center;
+}
+.grayBg {
+    background-color: #f3f3f3;
+}
+.notice_write table {
+    width: 100%;
+}
+.notice_write tr {
+    border-bottom: 1px solid #242d3c;
+    display: flex;
+    align-items: center;
+}
+.notice_write tr:first-child {
+    display: block;
+}
+.notice_write tr:first-child > td:first-child {
+    display: block;
+    border: none;
+    width: 100%;
+}
+.notice_write tr:last-child {
+    border: none;
+}
+.notice_write tr td:first-child {
+    text-align: center;
+    width: 200px;
+    line-height: 60px;
+}
+.notice_write tr td:nth-child(2) {
+    display: block;
+    border-left: 1px solid #242d3c;
+    box-sizing: border-box;
+    padding: 20px 25px;
+}

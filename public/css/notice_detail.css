@@ -1,0 +1,78 @@
+.notice_detail {
+    margin-top: 50px;
+}
+.notice_detail h2 {
+    text-align: center;
+}
+.grayBg {
+    background-color: #f3f3f3;
+}
+.notice_detail_wrap {
+    width: 100%;
+}
+.notice_detail .info_top {
+    padding: 25px 25px 12.5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #242d3c;
+}
+.notice_detail .info_bottom {
+    padding: 12.5px 25px 12.5px;
+    box-sizing: border-box;
+    text-align: right;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.notice_inner {
+    padding: 0 25px 25px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+}
+.notice_inner p {
+    display: block;
+    width: 100%;
+    background-color: #fefefe;
+    overflow-y: scroll;
+    height: 100%;
+    position: relative;
+}
+.direction_list {
+    width: fit-content;
+    display: flex;
+    margin: 0 auto;
+}
+.direction_list .prev,
+.direction_list .next {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.direction_list .prev:after,
+.direction_list .next:after {
+    font-size: 18px;
+    font-family: swiper-icons;
+}
+.direction_list .prev:after {
+    content: "prev";
+}
+.direction_list .next:after {
+    content: "next";
+}
+.rewrite_btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    line-height: 40px;
+    padding: 0 15px;
+    background-color: #242d3c;
+}
+.rewrite_btn > a {
+    font-size: 16px;
+    color: #fa6e91;
+}

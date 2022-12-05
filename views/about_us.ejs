@@ -1,0 +1,140 @@
+<!-- <header class="sub_header">
+    <div class="gnb p100">
+        <h1 id="main_logo"><a href="main"></a></h1>
+        <ul>
+            <li><a href="">ABOUT US</a></li>
+            <li><a href="">FOOD&GOODS</a></li>
+            <li><a href="">ART&CULTURE</a></li>
+            <li><a href="">WITH US</a></li>
+            <li><a href="">COMMUNITY</a></li>
+        </ul>
+        <div class="h_icons">
+            <div class="mypage_icon">
+                <a href="">MY<br />PAGE</a>
+            </div>
+            <div class="cate"><span></span><span></span><span></span></div>
+        </div>
+    </div>
+</header> -->
+<main class="about_us">
+    <section class="about_sec1 sec_wrap">
+        <div class="main_image_wrap">
+            <div class="main_image">
+                <h2>ABOUT US</h2>
+            </div>
+        </div>
+        <div class="textMarquee_wrap">
+            <div class="textMarquee">
+                <div class="cover">
+                    <div class="first_text"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about_sec2">
+        <div class="p100 about_sec2_wrap">
+            <h2>SEOMOON NIGHT-MARKET is:</h2>
+            <div class="swiper textRoller">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><h2 class="kr">총 거리 350M</h2></div>
+                    <div class="swiper-slide"><h2 class="kr">약 80매대</h2></div>
+                    <div class="swiper-slide"><h2 class="kr">조선시대부터 이어져온 전통시장</h2></div>
+                    <div class="swiper-slide"><h2 class="kr">복합문화예술의 장</h2></div>
+                    <div class="swiper-slide"><h2 class="kr">다양한 관광지</h2></div>
+                    <div class="swiper-slide"><h2 class="kr">대구, 맛의 중심</h2></div>
+                    <div class="swiper-slide"><h2 class="kr">대한민국 3대시장</h2></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about_sec3 sec_wrap">
+        <div class="p100 sec3_wrap">
+            <div class="magical">
+                <div class="magical_left">
+                    <h3>MAGICAL<br />THEME PARK</h3>
+                </div>
+                <div class="magical_right">
+                    <p>
+                        서문시장 야시장은 2016년 6월에 개장한, 총거리 350M에 달하는 대형 야시장입니다.
+                        <br /><br />
+                        총 80대의 매대에서 다양한 먹거리, 살거리를 판매하며<br />
+                        매일 저녁, 시민과 관광객에게 즐거움을 선사하는 복합문화공간입니다. <br />
+                        특히, 먹거리 일색인 타 야시장과는 달리 <br />
+                        먹거리, 볼거리, 즐길거리의 3대 요소가<br />
+                        연중으로 펼쳐지는 마법같은 관광지이기도 합니다.
+                    </p>
+                </div>
+            </div>
+            <div class="about_img"><img src="img/magical.png" alt="" /></div>
+            <!-- <div class="fantastic">
+                <div class="fantastic_left">
+                    <p>
+                        서문시장 야시장은 대구의 밤문화와 다양한 첨단, 문화예술이 복합되어 어디에서도 찾을 수 없는 경험을 제공합니다. 글로벌, 퓨전
+                        먹거리를 비롯하여 대구에서만 찾을 수 있는 독특한 음식 우리의 추억과 감성을 자극하는 다양한 볼거리, 살거리가 즐비합니다. 대구로
+                        방문하신다면 반드시 찾아가봐야 할 1순위는 단연 ‘서문시장 야시장’입니다.
+                    </p>
+                </div>
+                <div class="fantastic_right">
+                    <h3>FANTASTIC<br />NIGHT PARTY</h3>
+                    <div class="about_img"><img src="img/fantastic.png" alt="" /></div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <div class="box12"></div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="js/textMarquee.js"></script>
+<script>
+    vh_120 = window.innerHeight - 120;
+    console.log(vh_120);
+    window.onload = function () {
+        subHeader();
+    };
+    var swiper = new Swiper(".textRoller", {
+        direction: "vertical",
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+    });
+    window.onscroll = function () {
+        fgh();
+    };
+    function fgh() {
+        magical = document.querySelector(".magical");
+        magicalAdd = document.querySelector(".add");
+        ha = window.scrollY;
+        console.log("window.scrollY = " + ha);
+        if (vh_120 * 2 < ha) {
+            magical.classList.add("add");
+            console.log("if success");
+        }
+        if ((vh_120 * 2 <= ha && vh_120 * 3 < ha) || vh_120 * 2 > ha) {
+            console.log("!!");
+            magical.classList.remove("add");
+            console.log("!");
+        }
+    }
+    // let vh = window.innerHeight;
+    // window.addEventListener("scroll", (event) => {
+    //     keywordScroll();
+    // });
+
+    // let about_sec2 = document.querySelector(".about_sec2");
+    // let about_sec2_wrap = document.querySelector(".about_sec2_wrap");
+    // let about_sec2_top = about_sec2.offsetTop;
+    // let about_sec2_height = vh - 100;
+    // let keyword = document.querySelectorAll(".keyword");
+    // function keywordScroll() {
+    //     let height = about_sec2_top + about_sec2_height;
+    //     if (about_sec2_top < window.scrollY && height > window.scrollY) {
+    //         // about_sec2_wrap.classList.add("scroll");
+    //         for (i = 0; i <= keyword.length; i++) {
+    //             let keywordI = keyword[i];
+    //             console.log(keywordI);
+    //             keywordI.classList.add("ani");
+    //         }
+    //     }
+    // }
+</script>

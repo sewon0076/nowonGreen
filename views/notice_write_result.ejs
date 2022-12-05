@@ -1,0 +1,34 @@
+<main>
+    <div class="notice_detail sec_wrap">
+        <a href="notice"><h2>NOTICE</h2></a>
+        <div class="notice_detail_wrap p100_50">
+            <form class="grayBg">
+                <div class="notice_info">
+                    <div class="info_top">
+                        <div class="notice_title">
+                            <td><h4><%= notice_write_info.title %></h4></td>
+                        </div>
+                        <div class="notice_detail_date">
+                            <td><h4>DATE</h4></td>
+                        </div>
+                    </div>
+                    <div class="info_bottom">
+                        <div>
+                            <td><p>작성자:<%= notice_write_info.userId %></p></td>
+                        </div>
+                    </div>
+                </div>
+                <div class="notice_inner">
+                    <p>
+                        <%= notice_write_info.content %>
+                        <span class="rewrite_btn"><a href="notice_write">REWRITE</a></span>
+                    </p>
+                </div>
+            </form>
+        </div>
+        <div class="direction_list">
+            <div class="prev"></div>
+            <div class="next"></div>
+        </div>
+    </div>
+</main>

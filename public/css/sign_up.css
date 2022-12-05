@@ -1,0 +1,8 @@
+.mypage_content .create {
+    margin-top: 12px;
+    background-color: #242d3c;
+}
+.mypage_content .create > input {
+    color: #fa6e91;
+    font-weight: 900;
+}
