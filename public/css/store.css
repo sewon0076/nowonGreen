@@ -1,0 +1,218 @@
+.cart_slide {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    /* display: flex; */
+    justify-content: space-between;
+    top: 0;
+    z-index: 2000;
+}
+.cart_slide > div {
+    width: 50%;
+    height: 100%;
+}
+.cart_slide > div:first-child {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.cart_slide > div:last-child {
+    background-color: #fff;
+}
+.cart_wrap {
+    padding: 0px 50px;
+    box-sizing: border-box;
+}
+.cart_top {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart_top > span {
+    width: 40px;
+    height: 40px;
+    background-color: #242d3c;
+}
+/* ================================page start============= */
+.store {
+    margin-top: 100px;
+}
+.store h2 {
+    text-align: center;
+}
+.fg_title {
+    width: 100%;
+    padding: 25px 25px;
+    box-sizing: border-box;
+}
+.fg_categories {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 5px;
+}
+.foods > .fg_title {
+    background-color: #fa6e91;
+}
+.goods > .fg_title {
+    background-color: #ffe700;
+}
+.store_filter {
+    display: none;
+    gap: 25px;
+    justify-content: right;
+    align-items: center;
+}
+.store_filter > span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #f3f3f3;
+}
+.fg_title h4 {
+    color: #242d3c;
+    /* font-size: 28px; */
+}
+.fg_contents {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.fg_contents > div {
+    width: calc(25% - 37.5px);
+    background-color: #f3f3f3;
+}
+.fg_contents .img_wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    background-color: #fcfcfa;
+}
+.fg_contents img {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+.fg_info {
+    padding: 12.5px;
+    box-sizing: border-box;
+}
+.fg_contents h5 {
+    font-size: 22px;
+    font-weight: 900;
+}
+.fg_contents .kr {
+    line-height: 1.5;
+}
+.store_name {
+    font-size: 14px;
+    font-weight: 500;
+}
+.fg_contents .cart {
+    width: 100%;
+    border: 1px solid #242d3c;
+    padding: 12.5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fg_contents .cart > p {
+    font-size: 16px;
+}
+.fg_contents .cart > span {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-color: #242d3c;
+}
+.store .button {
+    margin: 0 auto;
+}
+@media (max-width: 1300px) {
+    .fg_contents {
+        gap: 25px;
+    }
+
+    .fg_contents > div {
+        width: calc(25% - 18.75px);
+        background-color: #f3f3f3;
+    }
+}
+@media (max-width: 1020px) {
+    .fg_contents {
+        gap: 25px;
+    }
+
+    .fg_contents > div {
+        width: calc(50% - 12.5px);
+        background-color: #f3f3f3;
+    }
+}
+@media (max-width: 900px) {
+    .store {
+        margin-top: 50px;
+    }
+    .fg_categories {
+        display: none;
+    }
+    .fg_title {
+        padding: 12.5px;
+    }
+    .store_filter {
+        display: flex;
+    }
+    .fg_contents h5 {
+        font-size: 18px;
+        font-weight: 900;
+    }
+    .store_name {
+        font-size: 12px;
+    }
+    .fg_contents .cart > p {
+        font-size: 14px;
+    }
+}
+@media (max-width: 500px) {
+    .fg_categories {
+        display: none;
+    }
+    .store_filter {
+        display: flex;
+    }
+    .fg_contents h5 {
+        font-size: 16px;
+        font-weight: 900;
+    }
+    .store_name {
+        font-size: 10px;
+    }
+    .fg_contents .cart > p {
+        font-size: 12px;
+    }
+    .store_filter > span {
+        width: 30px;
+        height: 30px;
+    }
+    .fg_contents {
+        gap: 10px;
+    }
+    .fg_contents > div {
+        width: calc(50% - 5px);
+        background-color: #f3f3f3;
+    }
+    .fg_contents .cart {
+        padding: 5px;
+    }
+    .fg_contents .cart > p:first-child {
+        display: none;
+    }
+    .fg_contents .cart > span {
+        display: block;
+    }
+}

@@ -3,28 +3,30 @@
 @import url(mypage.css);
 
 .forgot {
-	display: block;
-	margin-top: 12px;
-	width: 100%;
+    display: block;
+    margin: 12px 0 0;
+    width: 100%;
 }
 .forgot > a {
-	margin-right: 20px;
-	float: right;
-	text-decoration: underline;
+    font-size: 12px;
+    margin: 0px 20px 12px 0;
+    float: right;
+    text-decoration: underline;
 }
 
 p.notyet {
-	margin-top: 12px;
-	width: 100%;
+    margin-top: 12px;
+    width: 100%;
 }
 p.notyet > a {
-	display: block;
-	text-align: right;
-	margin-right: 20px;
-	text-decoration: underline;
+    font-size: 12px;
+    display: block;
+    text-align: right;
+    margin-right: 20px;
+    text-decoration: underline;
 }
 @media (max-width: 1440px) {
-	.login .wrap {
-		margin: 0 100px;
-	}
+    .login .wrap {
+        margin: 0 100px;
+    }
 }

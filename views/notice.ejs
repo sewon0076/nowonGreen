@@ -2,92 +2,28 @@
     <section>
         <div class="noticePage sec_wrap">
             <a href="notice"><h2>NOTICE</h2></a>
-            <!-- <div class="more"><a href="notice_write">작성하기</a></div> -->
+            <!-- <div class="button"><a href="notice_write">작성하기</a></div> -->
             <div class="noticePage_wrap p100_50">
                 <ul>
+                    <% rows.forEach((row,index)=>{%>
+                    <% let regisDate = row.create_time.getDate(); %>
+                    <% let regisMonth = row.create_time.getMonth()+1; %>
+                    <% let regisYear = row.create_time.getFullYear(); %>
                     <li>
-                        <a href="notice_content">
-                            <p>서문야시장 푸드트럭 셀러 모집</p>
+                        <input type="hidden" name="id" value="<%= row.name %>" />
+                        <a onclick="javascript:location.href='/notice_detail?id=<%= row.id %>'">
+                            <h5 class="kr"><%= row.title %></h5>
                             <div class="notice_date">
-                                <div class="date">18</div>
-                                <div class="month">2022.11</div>
+                                <div class="date"><%= regisDate %> </div>
+                                <div class="month year">
+                                    <%= regisYear %>
+                                    .
+                                    <%= regisMonth %>
+                                </div>
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="notice_content">
-                            <p>서문ㆍ칠성야시장 11월 공연 안내</p>
-                            <div class="notice_date">
-                                <div class="date">06</div>
-                                <div class="month">2022.11</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="notice_content">
-                            <p>서문ㆍ칠성야시장 11월 공연 참가자 모집 공고</p>
-                            <div class="notice_date">
-                                <div class="date">06</div>
-                                <div class="month">2022.11</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="notice_content">
-                            <p>2022 야시장 매대 운영자 모집 품평회 심사 대상 명단 공지</p>
-                            <div class="notice_date">
-                                <div class="date">19</div>
-                                <div class="month">2022.10</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="notice_content">
-                            <p>서문·칠성야시장 2차 매대운영자 모집공고</p>
-                            <div class="notice_date">
-                                <div class="date">12</div>
-                                <div class="month">2022.10</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="notice_content">
-                            <p>서문야시장 22년 10월 영업 공지</p>
-                            <div class="notice_date">
-                                <div class="date">01</div>
-                                <div class="month">2022.10</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="notice_content">
-                            <p>추석 명절 특별 이벤트 진행</p>
-                            <div class="notice_date">
-                                <div class="date">10</div>
-                                <div class="month">2022.09</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="notice_content">
-                            <p>서문야시장 22년 추석 명절 연휴 기간 영업 공지</p>
-                            <div class="notice_date">
-                                <div class="date">02</div>
-                                <div class="month">2022.09</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="notice_content">
-                            <p>서문·칠성야시장 1차 매대운영자 모집공고</p>
-                            <div class="notice_date">
-                                <div class="date">24</div>
-                                <div class="month">2022.08</div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                     <% }); %>
             <div class="notice_gnb">
                 <div class="number_list">
                     <div class="prev"></div>
@@ -100,7 +36,9 @@
                     </ul>
                     <div class="next"></div>
                 </div>
-                <div class="write_btn"><a href="notice_write">작성하기</a></div>
+                <div class="btn_wrap">
+                    <span class="notice_btn"><a href="notice_write"><input value="WRITE" type="button"/></a></span>
+                </div>
             </div>
         </div>
     </section>

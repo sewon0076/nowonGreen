@@ -51,10 +51,10 @@ h4 {
 	font-weight: 700;
 	letter-spacing: -0.03em;
 } */
-.more {
+.button {
     width: 185px;
 }
-.more > a {
+.button > a {
     background-color: #242d3c;
     width: 100%;
     font-size: 18px;
@@ -441,7 +441,7 @@ element.style {
     object-fit: cover;
     background-color: #242d3c;
 }
-.main_sec2 .more {
+.main_sec2 .button {
     margin: 50px auto 0Q;
 }
 .main_sec2 .swiper-button-next,
@@ -479,7 +479,7 @@ element.style {
     width: 100%;
     padding-top: 98%;
 }
-.main_about > .more {
+.main_about > .button {
     margin: 0 auto;
 }
 .behind {
@@ -586,7 +586,7 @@ element.style {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
-.event_content .more > a {
+.event_content .button > a {
     background-color: #ffe700;
     width: 100%;
     color: #242d3c;
@@ -649,7 +649,7 @@ element.style {
 .seller h3 {
     color: #ffe700;
 }
-.seller .more > a {
+.seller .button > a {
     background-color: #ffe700;
     color: #242d3c;
 }
@@ -824,7 +824,7 @@ element.style {
     transform: translateY(-50%);
     color: #fefefe;
 }
-.bingo_text > .more > a {
+.bingo_text > .button > a {
     background-color: #ffe700;
     color: #242d3c;
 }
@@ -1120,13 +1120,13 @@ element.style {
     .main_sec4 .sec4_left > div {
         width: 50%;
     }
-    .bingo_text > .more {
+    .bingo_text > .button {
         bottom: 25px;
     }
-    .more {
+    .button {
         width: 125px;
     }
-    .more > a {
+    .button > a {
         font-size: 14px;
         line-height: 40px;
     }

@@ -3,31 +3,41 @@
         <a href="notice"><h2>NOTICE</h2></a>
         <div class="notice_detail_wrap p100_50">
             <form class="grayBg">
+                <% let regisDate = row.create_time.getDate(); %> <% let regisMonth = row.create_time.getMonth()+1; %> <% let regisYear =
+                row.create_time.getFullYear(); %>
                 <div class="notice_info">
                     <div class="info_top">
                         <div class="notice_title">
-                            <td><h4></h4></td>
+                            <div><h4><%= row.title %></h4></div>
                         </div>
                         <div class="notice_detail_date">
-                            <td><h4>DATE</h4></td>
+                            <div><h4><%= regisYear %>.<%= regisMonth %>.<%= regisDate %></h4></div>
                         </div>
                     </div>
                     <div class="info_bottom">
                         <div>
-                            <td><p></p></td>
+                            <div><p>작성자: <%= row.name %></p></div>
                         </div>
                     </div>
                 </div>
-                <div class="notice_inner">
-                    <p>
-                        <span class="rewrite_btn"><a href="notice_write">REWRITE</a></span>
-                    </p>
+                <div class="notice_inner_wrap">
+                    <div class="notice_inner">
+                        <pre><p><%= row.content %></p></pre>
+                    </div>
+                </div>
+                <div class="btn_wrap">
+                    <span class="notice_btn"
+                        ><input value="REWRITE" type="button" onclick="javascript:location.href='/updateNotice?id=<%= row.id %>'"
+                    /></span>
+                    <span class="notice_btn">
+                        <input value="DELETE" class="button" type="button" onclick="javascript:location.href='/deleteN?id=<%= row.id %>'" />
+                    </span>
                 </div>
             </form>
         </div>
         <div class="direction_list">
-            <div class="prev"></div>
-            <div class="next"></div>
+            <div class="prev" onclick="javascript:location.href='/notice_detail?id=<%= row.id -1 %>'"></div>
+            <div class="next" onclick="javascript:location.href='/notice_detail?id=<%= row.id +1 %>'"></div>
         </div>
     </div>
 </main>
