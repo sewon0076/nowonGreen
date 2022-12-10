@@ -48,7 +48,7 @@ body {
 }
 .gnb > ul > li > a {
 	font-size: 18px;
-	font-weight: 900;
+	font-weight: 700;
 	color: #242d3c;
 }
 .h_icons {
@@ -140,7 +140,7 @@ body {
 .notice_date .date {
     color: #ffe700;
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 700;
 }
 .notice_date .month {
     display: flex;

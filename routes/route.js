@@ -16,6 +16,12 @@ router.get("/about_us", (req, res) => {
 router.get("/store", (req, res) => {
     res.render("store");
 });
+router.get("/performance", (req, res) => {
+    res.render("performance");
+});
+router.get("/promotion", (req, res) => {
+    res.render("promotion");
+});
 router.get("/login", (req, res) => {
     res.render("login");
 });

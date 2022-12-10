@@ -1,0 +1,39 @@
+.event .sec1{
+    width:100%;
+    height:1020px;
+}
+.event .event_info{
+    display: flex;
+    gap:50px;
+}
+.event_info>div:first-child{
+    width: calc((100% - 100px) / 3);
+}
+.event_info>div:last-child{
+    width: calc((100% - 100px) / 3 * 2 +  50px);
+}
+.event .info_list>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:25px 0;
+    border-bottom: 1px solid #242d3c;
+}
+.event .info_list>div:first-child{
+    padding-top:0;
+}
+.event .event_posters{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap:50px;
+    margin-top:50px;
+}
+.event .event_posters > div{
+    width:calc((100% - 100px) / 3);
+    background-color: bisque;
+}
+.event .event_posters > div>img{
+    width:100%;
+    padding-top:60%;
+}

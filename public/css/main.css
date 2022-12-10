@@ -38,7 +38,7 @@
 }
 h2 {
 	font-size: 48px;
-	font-weight: 900;
+	font-weight: 700;
 }
 h3 {
 	font-size: 46px;
@@ -58,7 +58,7 @@ h4 {
     background-color: #242d3c;
     width: 100%;
     font-size: 18px;
-    font-weight: 900;
+    font-weight: 700;
     color: #fefefe;
     display: flex;
     align-items: center;
@@ -236,7 +236,7 @@ h4 {
 }
 .gnb > ul > li > a {
     font-size: 18px;
-    font-weight: 900;
+    font-weight: 700;
     color: #fefefe;
 }
 .header_wrap .drop:hover > a {
@@ -247,7 +247,7 @@ h4 {
 }
 .header_wrap.scroll .gnb > ul > li > a {
     font-size: 18px;
-    font-weight: 900;
+    font-weight: 700;
     color: #242d3c;
 }
 .header_wrap.scroll .dropdown > a {
@@ -292,7 +292,7 @@ h4 {
     border-radius: 50%;
     background-color: #ffe700;
     font-size: 8px;
-    font-weight: 900;
+    font-weight: 700;
     color: #fa6e91;
     display: flex;
     justify-content: center;
@@ -366,7 +366,7 @@ h4 {
 }
 .mobile_gnb > ul > li a {
     font-size: 20px;
-    font-weight: 900;
+    font-weight: 700;
     color: #fefefe;
     position: relative;
     line-height: 60px;
@@ -988,7 +988,7 @@ element.style {
 	}
 	h2 {
 		font-size: 40px;
-		font-weight: 900;
+		font-weight: 700;
 	}
 	h3 {
 		font-size: 38px;
@@ -1074,7 +1074,7 @@ element.style {
     h2 {
         /* font-size: 48px; */
         font-size: 35px;
-        font-weight: 900;
+        font-weight: 700;
     }
     .bingo_text > h2 {
         font-size: 42px;
@@ -1139,13 +1139,13 @@ element.style {
         font-size: 12px;
     }
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     /* p {
 		font-size: 14px;
 	}
 	h2 {
 		font-size: 32px;
-		font-weight: 900;
+		font-weight: 700;
 	} */
     .main_about h2 {
         font-size: 24px;
