@@ -22,31 +22,6 @@ router.get("/performance", (req, res) => {
 router.get("/promotion", (req, res) => {
     res.render("promotion");
 });
-router.get("/login", (req, res) => {
-    res.render("login");
-});
-router.post("/login_info", (req, res) => {
-    let paramL = JSON.parse(JSON.stringify(req.body));
-    let id = paramL["id"];
-    let pw = paramL["password"];
-    console.log(id);
-    console.log(pw);
-});
-
-router.get("/sign_up", (req, res) => {
-    res.render("sign_up");
-});
-router.post("/sign_up_info", (req, res) => {
-    let param = JSON.parse(JSON.stringify(req.body));
-    let id = param["id"];
-    let pw = param["password"];
-    let confimPw = param["confirmPw"];
-    let phoneNum = param["phonenumber"];
-    console.log(id);
-    console.log(pw);
-    console.log(confimPw);
-    console.log(phoneNum);
-});
 
 // ===========================================notice======================================
 router.get("/notice", (req, res) => {
@@ -120,5 +95,42 @@ router.get("/notice_write_info", (req, res) => {
         res.render("notice_write", { rows: rows }); //ejs의 rows를 받아서 rows라는 이름으로 보낸다
     });
 });
+//=======================login/sign_up===========================================
 
+router.get("/sign_up", (req, res) => {
+    db.accountInfo((rows) => {
+        res.render("sign_up", { rows: rows }); //ejs의 rows를 받아서 rows라는 이름으로 보낸다
+    });
+});
+router.post("/sign_up_info", (req, res) => {
+    let param = JSON.parse(JSON.stringify(req.body));
+    let id = param["id"];
+    let pw = param["password"];
+    let confirmPw = param["confirmPw"];
+    let phoneNum = param["phonenumber"];
+    console.log(id);
+    console.log(pw);
+    console.log(confirmPw);
+    console.log(phoneNum);
+    db.createAccount(id, pw, confirmPw, phoneNum, () => {
+        res.redirect("/login");
+    });
+});
+router.get("/login", (req, res) => {
+    res.render("login"); //ejs의 rows를 받아서 rows라는 이름으로 보낸다
+});
+router.post("/login_info", (req, res) => {
+    let param = JSON.parse(JSON.stringify(req.body));
+    let id = param["id"];
+    let pw = param["password"];
+    db.loginAccount(id, pw, (results) => {
+        //result값이 있으면 complete_login페이지로 가고 없으면 alert이 뜨고 다시 login페이지로 가라
+        if (results.length > 0) {
+            res.redirect("/");
+        } else {
+            res.send(`<script>alert('LOGIN INFORMATION IS INVALID');document.location.href="/login"</script>`);
+            // res.redirect("login");
+        }
+    });
+});
 module.exports = router;

@@ -46,7 +46,28 @@ function deleteNotice(id, callback) {
         callback();
     });
 }
-
+//로그인 회원가입 페이지=============================================
+//회원정보를 받아올때
+function accountInfo(callback) {
+    connection.query("SELECT * FROM seomoonaccount", (err, rows) => {
+        if (err) throw err;
+        callback(rows);
+    });
+}
+//받아온 회원정보를 입력할때
+function createAccount(id, pw, confirmPw, phoneNum, callback) {
+    connection.query(`insert into seomoonaccount (id, pw, confirmPw, phoneNum) values ('${id}','${pw}','${confirmPw}','${phoneNum}')`, (err) => {
+        if (err) throw err;
+        callback();
+    });
+}
+//login
+function loginAccount(id, pw, callback) {
+    connection.query(`SELECT * FROM seomoonaccount where id='${id}' and pw='${pw}'`, (err, results) => {
+        if (err) throw err;
+        callback(results);
+    });
+}
 module.exports = {
     //여러 함수가 다 들어갈 수 있다
     getNotice,
@@ -54,4 +75,7 @@ module.exports = {
     getNoticeByid,
     updateNotice,
     deleteNotice,
+    accountInfo,
+    createAccount,
+    loginAccount,
 };
