@@ -11,7 +11,7 @@ connection.connect(function (err) {
 });
 //메모를 추출할때
 function getNotice(callback) {
-    connection.query("SELECT * FROM seomoon_db ORDER BY id desc", (err, rows) => {
+    connection.query("SELECT * FROM seomoon_db ORDER BY id", (err, rows) => {
         if (err) throw err;
         callback(rows);
     });
