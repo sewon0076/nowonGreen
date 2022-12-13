@@ -3,8 +3,42 @@
         <div class="noticePage sec_wrap">
             <a href="notice"><h2>NOTICE</h2></a>
             <!-- <div class="button"><a href="notice_write">작성하기</a></div> -->
-            <div class="noticePage_wrap p100_50">
-                <ul>
+            <div class="swiper noticePage_wrap p100_50">
+                <div class="swiper-wrapper">
+                    <ul class="swiper-slide">
+                        <% for(i=0; i<9; i++){%> <% let regisDate = rows[i].create_time.getDate(); %> <% let regisMonth =
+                        rows[i].create_time.getMonth()+1; %> <% let regisYear = rows[i].create_time.getFullYear(); %>
+                        <li>
+                            <input type="hidden" name="id" value="<%= rows[i].name %>" />
+                            <a onclick="javascript:location.href='/notice_detail?id=<%= rows[i].id %>'">
+                                <h5 class="kr"><%= rows[i].title %></h5>
+                                <div class="notice_date">
+                                    <div class="date"><%= regisDate %></div>
+                                    <div class="month year"><%= regisYear %> . <%= regisMonth %></div>
+                                </div>
+                            </a>
+                        </li>
+                        <% }; %>
+                    </ul>
+                    <ul class="swiper-slide">
+                        <% for(i=0; i<9; i++){%> <% let regisDate = rows[i].create_time.getDate(); %> <% let regisMonth =
+                        rows[i].create_time.getMonth()+1; %> <% let regisYear = rows[i].create_time.getFullYear(); %>
+                        <li>
+                            <input type="hidden" name="id" value="<%= rows[i].name %>" />
+                            <a onclick="javascript:location.href='/notice_detail?id=<%= rows[i].id %>'">
+                                <h5 class="kr"><%= rows[i].title %></h5>
+                                <div class="notice_date">
+                                    <div class="date"><%= regisDate %></div>
+                                    <div class="month year"><%= regisYear %> . <%= regisMonth %></div>
+                                </div>
+                            </a>
+                        </li>
+                        <% }; %>
+                    </ul>
+                </div>
+                <div class="swiper-pagination"></div>
+
+                <!-- <ul>
                     <% for(i=0; i<9; i++){%> <% let regisDate = rows[i].create_time.getDate(); %> <% let regisMonth =
                     rows[i].create_time.getMonth()+1; %> <% let regisYear = rows[i].create_time.getFullYear(); %>
                     <li>
@@ -18,7 +52,7 @@
                         </a>
                     </li>
                     <% }; %>
-                </ul>
+                </ul> -->
             </div>
             <div class="notice_gnb">
                 <div class="number_list">
@@ -41,3 +75,17 @@
         </div>
     </section>
 </main>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".noticePage_wrap", {
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+        },
+    });
+</script>
