@@ -7,9 +7,6 @@ const fs = require("fs");
 const path = require("path");
 const db = require("./../db.js");
 
-router.get("/", (req, res) => {
-    res.render("main");
-});
 router.get("/about_us", (req, res) => {
     res.render("about_us");
 });
@@ -27,6 +24,11 @@ router.get("/promotion", (req, res) => {
 router.get("/notice", (req, res) => {
     db.getNotice((rows) => {
         res.render("notice", { rows: rows });
+    });
+});
+router.get("/", (req, res) => {
+    db.getNotice((rows) => {
+        res.render("main", { rows: rows });
     });
 });
 //노티스 적는 페이지 받아오기

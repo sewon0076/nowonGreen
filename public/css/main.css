@@ -38,7 +38,7 @@
 }
 h2 {
 	font-size: 48px;
-	font-weight: 700;
+	font-weight: 900;
 }
 h3 {
 	font-size: 46px;
@@ -48,7 +48,7 @@ h4 {
 }
 .kr {
 	font-family: "GmarketSans";
-	font-weight: 700;
+	font-weight: 900;
 	letter-spacing: -0.03em;
 } */
 .button {
@@ -58,7 +58,7 @@ h4 {
     background-color: #242d3c;
     width: 100%;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 900;
     color: #fefefe;
     display: flex;
     align-items: center;
@@ -236,7 +236,7 @@ h4 {
 }
 .gnb > ul > li > a {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 900;
     color: #fefefe;
 }
 .header_wrap .drop:hover > a {
@@ -247,7 +247,7 @@ h4 {
 }
 .header_wrap.scroll .gnb > ul > li > a {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 900;
     color: #242d3c;
 }
 .header_wrap.scroll .dropdown > a {
@@ -290,9 +290,9 @@ h4 {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background-color: #ffe700;
+    background-color: #ffe900;
     font-size: 8px;
-    font-weight: 700;
+    font-weight: 900;
     color: #fa6e91;
     display: flex;
     justify-content: center;
@@ -366,7 +366,7 @@ h4 {
 }
 .mobile_gnb > ul > li a {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 900;
     color: #fefefe;
     position: relative;
     line-height: 60px;
@@ -587,7 +587,7 @@ element.style {
     -webkit-box-orient: vertical;
 }
 .event_content .button > a {
-    background-color: #ffe700;
+    background-color: #ffe900;
     width: 100%;
     color: #242d3c;
     display: flex;
@@ -647,10 +647,10 @@ element.style {
     background-size: cover;
 }
 .seller h3 {
-    color: #ffe700;
+    color: #ffe900;
 }
 .seller .button > a {
-    background-color: #ffe700;
+    background-color: #ffe900;
     color: #242d3c;
 }
 .main_sec4 .sec4_left {
@@ -670,7 +670,7 @@ element.style {
     height: 100%;
 }
 .untact_buying {
-    background-color: #ffe700;
+    background-color: #ffe900;
 }
 .main_notice {
     background-color: #fa6e91;
@@ -715,11 +715,11 @@ element.style {
     align-items: center;
 }
 .notice_date .date {
-    color: #ffe700;
+    color: #ffe900;
     font-size: 30px;
 }
 .notice_date .month {
-    color: #ffe700;
+    color: #ffe900;
     font-size: 14px;
 }
 /* =============================sec5======================= */
@@ -814,7 +814,7 @@ element.style {
 }
 .bingo_text > h2 {
     text-align: center;
-    color: #ffe700;
+    color: #ffe900;
     font-size: 60px;
 }
 .bingo_text p {
@@ -825,7 +825,7 @@ element.style {
     color: #fefefe;
 }
 .bingo_text > .button > a {
-    background-color: #ffe700;
+    background-color: #ffe900;
     color: #242d3c;
 }
 .bingo_game_wrap {
@@ -988,7 +988,7 @@ element.style {
 	}
 	h2 {
 		font-size: 40px;
-		font-weight: 700;
+		font-weight: 900;
 	}
 	h3 {
 		font-size: 38px;
@@ -1074,7 +1074,7 @@ element.style {
     h2 {
         /* font-size: 48px; */
         font-size: 35px;
-        font-weight: 700;
+        font-weight: 900;
     }
     .bingo_text > h2 {
         font-size: 42px;
@@ -1131,21 +1131,21 @@ element.style {
         line-height: 40px;
     }
     .notice_date .date {
-        color: #ffe700;
+        color: #ffe900;
         font-size: 20px;
     }
     .notice_date .month {
-        color: #ffe700;
+        color: #ffe900;
         font-size: 12px;
     }
 }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     /* p {
 		font-size: 14px;
 	}
 	h2 {
 		font-size: 32px;
-		font-weight: 700;
+		font-weight: 900;
 	} */
     .main_about h2 {
         font-size: 24px;

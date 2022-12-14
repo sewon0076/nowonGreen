@@ -48,7 +48,7 @@ body {
 }
 .gnb > ul > li > a {
 	font-size: 18px;
-	font-weight: 700;
+	font-weight: 900;
 	color: #242d3c;
 }
 .h_icons {
@@ -62,7 +62,7 @@ body {
 	width: 42px;
 	height: 42px;
 	border-radius: 50%;
-	background-color: #ffe700;
+	background-color: #ffe900;
 	font-size: 8px;
 	font-weight: bold;
 	color: #fa6e91;
@@ -138,13 +138,13 @@ body {
     align-items: center;
 }
 .notice_date .date {
-    color: #ffe700;
+    color: #ffe900;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 900;
 }
 .notice_date .month {
     display: flex;
-    color: #ffe700;
+    color: #ffe900;
     font-size: 14px;
 }
 .notice_gnb {

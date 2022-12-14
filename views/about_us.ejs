@@ -49,23 +49,57 @@
     </section>
     <section class="about_sec3 sec_wrap">
         <div class="p100 sec3_wrap">
-            <div class="magical">
-                <div class="magical_left">
+            <div class="sec3_con magical">
+                <div class="full p50all">
                     <h3>MAGICAL<br />THEME PARK</h3>
+                    <div class="full_wrap">
+                        <div class="img"></div>
+                        <div class="content">
+                            <p>
+                                서문시장 야시장은 2016년 6월에 개장한, 총거리 350M에 달하는 대형 야시장입니다.
+                                <br /><br />
+                                총 80대의 매대에서 다양한 먹거리, 살거리를 판매하며<br />
+                                매일 저녁, 시민과 관광객에게 즐거움을 선사하는 복합문화공간입니다. <br />
+                                특히, 먹거리 일색인 타 야시장과는 달리 <br />
+                                먹거리, 볼거리, 즐길거리의 3대 요소가<br />
+                                연중으로 펼쳐지는 마법같은 관광지이기도 합니다.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="magical_right">
-                    <p>
-                        서문시장 야시장은 2016년 6월에 개장한, 총거리 350M에 달하는 대형 야시장입니다.
-                        <br /><br />
-                        총 80대의 매대에서 다양한 먹거리, 살거리를 판매하며<br />
-                        매일 저녁, 시민과 관광객에게 즐거움을 선사하는 복합문화공간입니다. <br />
-                        특히, 먹거리 일색인 타 야시장과는 달리 <br />
-                        먹거리, 볼거리, 즐길거리의 3대 요소가<br />
-                        연중으로 펼쳐지는 마법같은 관광지이기도 합니다.
-                    </p>
+                <div class="img_wrap p50all">
+                    <div class="sticker"><h5>SEOMOON NIGHTMARKET</h5></div>
+                    <div class="img"></div>
                 </div>
             </div>
-            <div class="about_img"><img src="img/magical.png" alt="" /></div>
+        </div>
+    </section>
+    <section class="about_sec3 sec_wrap">
+        <div class="p100 sec3_wrap">
+            <div class="sec3_con fantastic">
+                <div class="img_wrap p50all">
+                    <div class="sticker"><h5>SEOMOON NIGHTMARKET</h5></div>
+                    <div class="img"></div>
+                </div>
+                <div class="full p50all">
+                    <h3>FANTASTIC<br />NIGHT MARKET</h3>
+                    <div class="full_wrap">
+                        <div class="img"></div>
+                        <div class="content">
+                            <p>
+                                서문시장 야시장은 2016년 6월에 개장한, 총거리 350M에 달하는 대형 야시장입니다.
+                                <br /><br />
+                                총 80대의 매대에서 다양한 먹거리, 살거리를 판매하며<br />
+                                매일 저녁, 시민과 관광객에게 즐거움을 선사하는 복합문화공간입니다. <br />
+                                특히, 먹거리 일색인 타 야시장과는 달리 <br />
+                                먹거리, 볼거리, 즐길거리의 3대 요소가<br />
+                                연중으로 펼쳐지는 마법같은 관광지이기도 합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- <div class="fantastic">
                 <div class="fantastic_left">
                     <p>
@@ -81,8 +115,6 @@
             </div> -->
         </div>
     </section>
-    <div class="box12"></div>
-    <div class="box13"></div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="js/textMarquee.js"></script>
@@ -99,24 +131,24 @@
             disableOnInteraction: false,
         },
     });
-    window.onscroll = function () {
-        fgh();
-    };
-    function fgh() {
-        magical = document.querySelector(".magical");
-        magicalAdd = document.querySelector(".add");
-        ha = window.scrollY;
-        console.log("window.scrollY = " + ha);
-        if (vh_120 * 2 < ha) {
-            magical.classList.add("add");
-            console.log("if success");
-        }
-        if ((vh_120 * 2 <= ha && vh_120 * 3 < ha) || vh_120 * 2 > ha) {
-            console.log("!!");
-            magical.classList.remove("add");
-            console.log("!");
-        }
-    }
+    // window.onscroll = function () {
+    //     fgh();
+    // };
+    // function fgh() {
+    //     magical = document.querySelector(".magical");
+    //     magicalAdd = document.querySelector(".add");
+    //     ha = window.scrollY;
+    //     console.log("window.scrollY = " + ha);
+    //     if (vh_120 * 2 < ha) {
+    //         magical.classList.add("add");
+    //         console.log("if success");
+    //     }
+    //     if ((vh_120 * 2 <= ha && vh_120 * 3 < ha) || vh_120 * 2 > ha) {
+    //         console.log("!!");
+    //         magical.classList.remove("add");
+    //         console.log("!");
+    //     }
+    // }
     // let vh = window.innerHeight;
     // window.addEventListener("scroll", (event) => {
     //     keywordScroll();
