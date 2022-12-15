@@ -34,21 +34,7 @@
     align-items: center;
     position: relative;
 }
-.gnb > ul {
-    display: flex;
-    justify-content: center;
-    gap: 33px;
-    align-items: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-}
-.gnb > ul > li > a {
-    font-size: 18px;
-    font-weight: 900;
-    color: #242d3c;
-}
+
 .h_icons {
     position: absolute;
     height: 100px;

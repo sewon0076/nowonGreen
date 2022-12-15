@@ -16,7 +16,6 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow-x: hidden;
     /* margin-bottom: 100px; */
 }
 
@@ -28,11 +27,11 @@ body {
 .about_sec1 .main_image {
     position: relative;
     width: 100%;
-    padding-top: 112%;
+    padding-top: 130%;
     /* background-image: url(../img/comestrue.png) */
     background-repeat: no-repeat;
     background-size: cover;
-    transform: rotate(-10.39deg);
+    transform: rotate(8.39deg);
     background-color: #fa6e91;
 }
 .about_us .main_image h2 {
@@ -104,15 +103,14 @@ body {
 
 .about_us .sec3_con {
     width: 100%;
-    height: calc(100vh - 150px);
+    height: 600px;
     display: flex;
     flex-wrap: wrap;
+    gap: 50px;
 }
-.magical {
-    background-color: #fa6e91;
-}
+
 .about_us .sec3_con > div {
-    width: 50%;
+    width: calc(50% - 25px);
     height: 100%;
 }
 .sec3_con .full {
@@ -146,41 +144,48 @@ body {
     box-sizing: border-box;
     border-radius: 100%;
     background-color: #fefefe;
+    background-position: center center;
+    background-size: cover;
+}
+.magical .full .img {
+    background-image: url(../img/bubble.png);
+}
+.fantastic .full .img {
+    background-image: url(../img/light.png);
 }
 .sec3_con .full .content {
-    background-color: #fefefe;
+    background-color: #f3f3f3;
     width: 100%;
     padding: 25px;
     box-sizing: border-box;
 }
-
+.sec3_con .full p {
+    line-height: 1.4;
+}
 .sec3_con .img_wrap {
     position: relative;
+    display: block;
+    height: 100%;
 }
 .img_wrap .sticker {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 25px;
+    gap: 5px;
+    top: -25px;
     left: 50%;
     transform: translateX(-50%);
     width: 45%;
     height: 40px;
-    font-weight: 900;
     border-radius: 25px;
     border: 2px solid #fefefe;
     box-sizing: border-box;
     background-color: #242d3c;
 }
-.magical .sticker h5 {
+.sticker h5 {
     color: #fefefe;
-}
-.fantastic .sticker h5 {
-    color: #fefefe;
-}
-.fantastic .img_wrap .sticker {
-    background-color: #fa6e91;
+    font-size: 20px;
 }
 .about_us .sec3_con .img_wrap .img {
     width: 100%;
@@ -189,67 +194,42 @@ body {
     background-position: center top;
     background-repeat: no-repeat;
 }
+
 .about_us .magical .img_wrap .img {
     background-image: url(../img/magical.png);
 }
 .about_us .fantastic .img_wrap .img {
     background-image: url(../img/fantastic.png);
 }
-.fantastic {
-    background-color: #242d3c;
+.magical .full h4 {
+    color: #242d3c;
+    text-align: center;
 }
-
-.fantastic .full h3 {
-    color: #fa6e91;
+.fantastic .full h4 {
+    color: #242d3c;
+    text-align: center;
 }
 @media (max-width: 1200px) {
-    .about_us .sec3_con {
-        width: 100%;
-        height: calc(100vh - 150px);
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .about_us .sec3_con > div {
-        width: 100%;
-        height: auto;
-    }
-    /* .full_wrap {
-        height: 400px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 25px;
-    } */
-    .sec3_con .full .img {
+    .sticker h5:nth-child(2) {
         display: none;
-        /* width: 60%;
-        padding: 0;
-        height: 500px; */
-    }
-    .sec3_con .full .content {
-        width: 100%;
-    }
-    .img_wrap .sticker {
-        top: 12.5px;
-    }
-    .about_us .fantastic {
-        flex-wrap: wrap-reverse;
-    }
-    .sec3_con .full .content p {
-        font-size: 14px;
     }
 }
 @media (max-width: 900px) {
-    .full_wrap {
-        flex-wrap: wrap;
-    }
-    /* .sec3_con .full .img {
-        width: 60%;
-        padding: 0;
-        height: 50%;
-    } */
-    /* .sec3_con .full .content {
+    .about_us .sec3_con {
         width: 100%;
-    }*/
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    .about_us .sec3_con.fantastic {
+        flex-wrap: wrap-reverse;
+    }
+
+    .about_us .sec3_con > div {
+        width: 100%;
+        height: 500px;
+    }
+}
+@media (max-width: 500px) {
 }

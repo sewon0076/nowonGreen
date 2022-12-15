@@ -95,7 +95,6 @@ h4 {
 .gnb > ul {
     display: flex;
     justify-content: center;
-    gap: 33px;
     align-items: center;
     position: absolute;
     left: 50%;
@@ -227,6 +226,7 @@ h4 {
     background-size: cover;
 } */
 .gnb > ul > li {
+    padding: 0 15px;
     position: relative;
     height: 100px;
     display: flex;
@@ -1031,7 +1031,7 @@ element.style {
     }
     .mypage_icon {
         position: absolute;
-        right: 50px;
+        right: 0;
     }
     .mypage_icon > a {
         width: 30px;
@@ -1092,6 +1092,10 @@ element.style {
     }
     .gnb > ul {
         display: none;
+    }
+    .mypage_icon {
+        position: absolute;
+        right: 50px;
     }
     /* ==================slide========== */
     .feature .swiper-slide {

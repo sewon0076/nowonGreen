@@ -2,7 +2,7 @@
     <div class="cart_slide">
         <div class="monotone"></div>
         <div class="cart_wrap">
-           <div class="cart_top_wrap">
+            <div class="cart_top_wrap">
                 <div class="cart_top">
                     <h4>YOUR CART</h4>
                     <span class="cart_close"></span>
@@ -23,7 +23,7 @@
                         <div class="button"><a href="">DELETE</a></div>
                     </li>
                 </ul>
-           </div>
+            </div>
             <div class="checkout">
                 <div>
                     <h4>TOTAL:</h4>
@@ -31,22 +31,21 @@
                 </div>
                 <div class="button"><a href="">CHECKOUT</a></div>
             </div>
-
         </div>
     </div>
     <div class="store p100">
         <div class="sec_wrap">
             <h2 class="p50">STORE</h2>
             <div class="store_content">
-                <div class="foods p50">
+                <div class="foods">
                     <div class="fg_title">
                         <div class="fg_categories">
-                            <h4>FOODS ></h4>
-                            <a href=""><h4>VEGETABLE ></h4></a>
-                            <a href=""><h4>MEAT ></h4></a>
-                            <a href=""><h4>FISH ></h4></a>
-                            <a href=""><h4>VISTRO ></h4></a>
-                            <a href=""><h4>DESSERT</h4></a>
+                            <h5>FOODS ></h5>
+                            <a href=""><h5>VEGETABLE /</h5></a>
+                            <a href=""><h5>MEAT /</h5></a>
+                            <a href=""><h5>FISH /</h5></a>
+                            <a href=""><h5>VISTRO /</h5></a>
+                            <a href=""><h5>DESSERT</h5></a>
                         </div>
                         <div class="store_filter">
                             <!-- <h4>filter</h4> -->
@@ -54,114 +53,35 @@
                         </div>
                     </div>
                     <div class="fg_contents p50">
+                        <% rows1.forEach((row,index)=>{%>
+                        <input type="hidden" name="id" value="<%= row.id %>" />
                         <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
+                            <div class="img_wrap" onclick="javascript:location.href='/product_d?id=<%= row.id %>'">
+                                <img src="<%= row.product_img %>" alt="" />
+                            </div>
                             <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
+                                <h5 class="kr"><%= row.product_name %></h5>
+                                <p class="kr store_name"><%= row.store_name %></p>
                                 <div class="cart">
                                     <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
+                                    <p class="kr"><%= row.price %>￦</p>
                                     <span></span>
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
-                            <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
-                                <div class="cart">
-                                    <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
-                            <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
-                                <div class="cart">
-                                    <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
-                            <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
-                                <div class="cart">
-                                    <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
-                            <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
-                                <div class="cart">
-                                    <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
-                            <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
-                                <div class="cart">
-                                    <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
-                            <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
-                                <div class="cart">
-                                    <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
-                            <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
-                                <div class="cart">
-                                    <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
+                        <% }); %>
                     </div>
                     <div class="button"><a href="">button</a></div>
                 </div>
-                <div class="goods p50">
+                <div class="goods">
                     <div class="fg_title">
                         <div class="fg_categories">
-                            <h4>GOODS ></h4>
-                            <a href=""><h4>CLOTHING ></h4></a>
-                            <a href=""><h4>LIVING ></h4></a>
-                            <a href=""><h4>WELLNESS ></h4></a>
-                            <a href=""><h4>ACCESSORIES ></h4></a>
-                            <a href=""><h4>ETC</h4></a>
+                            <h5>GOODS ></h5>
+                            <a href=""><h5>CLOTHING /</h5></a>
+                            <a href=""><h5>LIVING /</h5></a>
+                            <a href=""><h5>WELLNESS /</h5></a>
+                            <a href=""><h5>ACCESSORIES /</h5></a>
+                            <a href=""><h5>ETC</h5></a>
                         </div>
                         <div class="store_filter">
                             <!-- <h4>filter</h4> -->
@@ -169,102 +89,20 @@
                         </div>
                     </div>
                     <div class="fg_contents p50">
+                        <% rows2.forEach((row,index)=>{%>
                         <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
+                            <div class="img_wrap"><img src="<%= row.product_img %>" alt="" /></div>
                             <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
+                                <h5 class="kr"><%= row.product_name %></h5>
+                                <p class="kr store_name"><%= row.store_name %></p>
                                 <div class="cart">
                                     <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
+                                    <p class="kr"><%= row.price %>￦</p>
                                     <span></span>
                                 </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
-                            <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
-                                <div class="cart">
-                                    <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
-                            <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
-                                <div class="cart">
-                                    <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
-                            <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
-                                <div class="cart">
-                                    <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
-                            <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
-                                <div class="cart">
-                                    <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
-                            <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
-                                <div class="cart">
-                                    <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
-                            <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
-                                <div class="cart">
-                                    <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="img_wrap"><img src="img/bibimbab.png" alt="" /></div>
-                            <div class="fg_info">
-                                <h5 class="kr">닭꼬치</h5>
-                                <p class="kr store_name">순이네 분식</p>
-                                <div class="cart">
-                                    <p>ADD TO CART</p>
-                                    <p class="kr">2000￦</p>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
+                        <% }); %>
                     </div>
                     <div class="button"><a href="">button</a></div>
                 </div>

@@ -102,15 +102,12 @@
     line-height: 80px;
 }
 /* ================================page start============= */
-.store {
-    margin-top: 100px;
-}
 .store h2 {
     text-align: center;
 }
 .fg_title {
     width: 100%;
-    padding: 25px 25px;
+    padding: 15px;
     box-sizing: border-box;
 }
 .fg_categories {
@@ -202,7 +199,13 @@
 .store .button {
     margin: 0 auto;
 }
+.goods {
+    margin-top: 100px;
+}
 @media (max-width: 1300px) {
+    .store {
+        margin-top: 50px;
+    }
     .fg_contents {
         gap: 25px;
     }

@@ -1,0 +1,42 @@
+<main>
+    <div class="product_detail p100">
+        <div class="p_detail_wrap sec_wrap">
+            <div class="product_img p50all">
+                <img src="<%= row.product_img %>" alt="" />
+                <img src="<%= row.product_img %>" alt="" />
+                <img src="<%= row.product_img %>" alt="" />
+            </div>
+            <div class="product_info p50all">
+                <div class="p_info_wrap">
+                    <div class="fg_title">
+                        <div class="fg_categories">
+                            <h5><%= row.category %></h5>
+                        </div>
+                        <div class="store_filter">
+                            <!-- <h4>filter</h4> -->
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="name">
+                        <h5 class="kr"><%= row.store_name %></h5>
+                        <h4 class="kr"><%= row.product_name %></h4>
+                    </div>
+                    <div class="detail">
+                        <div class="description">
+                            <pre><%= row.product_detail %></pre>
+                        </div>
+                        <div class="price">
+                            <p><%= row.price %>￦</p>
+                        </div>
+                    </div>
+                    <div class="button_wrap">
+                        <div class="button"><a href="">BUY IT NOW</a></div>
+                        <div class="button"><a href="">ADD TO CART</a></div>
+                        <div class="button"><a onclick="javascript:location.href='/updateP?id=<%= row.id %>'">MODIFY</a></div>
+                        <div class="button"><a onclick="javascript:location.href='/deleteP?id=<%= row.id %>'">DELETE</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

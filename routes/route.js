@@ -7,18 +7,117 @@ const fs = require("fs");
 const path = require("path");
 const db = require("./../db.js");
 
+//=============
+const upload = multer({
+    storage: multer.diskStorage({
+        destination(req, file, done) {
+            done(null, "../public/uploads/");
+        },
+        filename(req, file, done) {
+            const ext = path.extname(file.originalname); //파일의 확장자
+            done(null, path.basename(file.originalname, ext) + Date.now() + ext); //파일명 + 날짜 _ 확장자명
+        },
+    }),
+    limits: { fileSize: 1920 * 1024 * 5 }, //2메가 까지 업로드 가능
+});
+
 router.get("/about_us", (req, res) => {
     res.render("about_us");
 });
-router.get("/store", (req, res) => {
-    res.render("store");
+router.get("/product_detail", (req, res) => {
+    res.render("product_detail");
 });
+
 router.get("/performance", (req, res) => {
     res.render("performance");
 });
 router.get("/promotion", (req, res) => {
     res.render("promotion");
 });
+//================================store1===============================================
+router.get("/store", (req, res) => {
+    db.getProduct((rows1, rows2) => {
+        res.render("store", { rows1: rows1, rows2: rows2 }); //ejs의 rows를 받아서 rows라는 이름으로 보낸다
+    });
+});
+router.get("/product_insert", (req, res) => {
+    res.render("product_insert");
+});
+router.post("/p_insert", upload.single("product_img"), (req, res) => {
+    let param = JSON.parse(JSON.stringify(req.body));
+    let img = "uploads/" + req.file.filename;
+    let password = param["password"];
+    let p_name = param["p_name"];
+    let p_store = param["p_store"];
+    let p_detail = param["p_detail"];
+    let price = param["price"];
+    let category = param["category"];
+    db.insertProduct(password, img, p_name, p_store, p_detail, price, category, () => {
+        res.redirect("/store"); //redirect 에는 / 붙인다
+    });
+});
+
+//id에 맞는 내용 부르기
+router.get("/product_d", (req, res) => {
+    let id = req.query.id;
+    db.getProductByid(id, (row) => {
+        res.render("product_detail", { row: row[0] });
+    });
+});
+router.get("/product_update", (req, res) => {
+    res.render("product_update");
+});
+router.get("/updateP", (req, res) => {
+    let id = req.query.id;
+    console.log(id);
+    //getMemobyId는 그냥 지어준 이름
+    db.getProductByid(id, (row) => {
+        res.render("product_update", { row: row[0] });
+    });
+});
+router.post("/p_rewrite", upload.single("product_img"), (req, res) => {
+    let param = JSON.parse(JSON.stringify(req.body));
+    let img = "uploads/" + req.file.filename;
+    let id = req.query.id;
+    let password = param["password"];
+    let p_name = param["p_name"];
+    let p_store = param["p_store"];
+    let p_detail = param["p_detail"];
+    let price = param["price"];
+    let category = param["category"];
+    db.updateProduct(id, password, img, p_name, p_store, p_detail, price, category, () => {
+        res.redirect("/store"); //redirect 에는 / 붙인다
+    });
+});
+
+//삭제하기======================================================
+router.get("/deleteP", (req, res) => {
+    let id = req.query.id;
+    db.deleteProduct(id, () => {
+        res.redirect("/store");
+    });
+});
+// ======================================================
+//================================store2===============================================
+
+router.get("/product_insert2", (req, res) => {
+    res.render("product_insert2");
+});
+router.post("/p_insert2", upload.single("product_img"), (req, res) => {
+    let param = JSON.parse(JSON.stringify(req.body));
+    let img = "uploads/" + req.file.filename;
+    let password = param["password"];
+    let p_name = param["p_name"];
+    let p_store = param["p_store"];
+    let p_detail = param["p_detail"];
+    let price = param["price"];
+    let category = param["category"];
+    db.insertProduct2(password, img, p_name, p_store, p_detail, price, category, () => {
+        res.redirect("/store"); //redirect 에는 / 붙인다
+    });
+});
+
+// ======================================================
 
 // ===========================================notice======================================
 router.get("/notice", (req, res) => {
@@ -36,7 +135,7 @@ router.get("/notice_write", (req, res) => {
     res.render("notice_write");
 });
 //노티스 적는 페이지의 폼 받아 노티스 리스트로 다시 보내기
-router.post("/p_insert", (req, res) => {
+router.post("/notice_write_info", (req, res) => {
     let param = JSON.parse(JSON.stringify(req.body));
     let title = param["title"];
     let name = param["userId"];

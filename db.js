@@ -4,11 +4,75 @@ var connection = mysql.createConnection({
     user: "root",
     password: "1234",
     database: "seomoon_notice",
+    multipleStatements: true, //데이터 여러개 넣는것
 });
 connection.connect(function (err) {
     if (err) throw err;
     console.log("connected!");
 });
+//store=================================================
+//상품를 입력할때
+function insertProduct(password, img, p_name, p_store, p_detail, price, category, callback) {
+    connection.query(
+        `insert into store (password, product_name, store_name, product_detail, product_img, price, category) values (${password}, '${p_name}','${p_store}', '${p_detail}','${img}','${price}','${category}' )`,
+        (err) => {
+            if (err) throw err;
+            callback();
+        }
+    );
+}
+//메모를 추출할때
+function getProduct(callback) {
+    connection.query("SELECT * FROM store ORDER BY id;" + "SELECT * FROM store2 ORDER BY id;", (err, rows) => {
+        if (err) throw err;
+        let rows1 = rows[0];
+        let rows2 = rows[1];
+        callback(rows1, rows2);
+    });
+}
+function getProductByid(id, callback) {
+    connection.query(`SELECT * FROM store where id=${id}`, (err, row) => {
+        if (err) throw err;
+        callback(row);
+    });
+}
+//아이디가 일치하는 부분을 update한 내용 내보내기
+function updateProduct(id, password, img, p_name, p_store, p_detail, price, category, callback) {
+    connection.query(
+        `UPDATE store set password=${password}, product_name ='${p_name}', store_name ='${p_store}', product_detail='${p_detail}', product_img ='${img}', price ='${price}', category ='${category}' where id=${id}`,
+        (err) => {
+            if (err) throw err;
+            callback();
+        }
+    );
+}
+//아이디가 일치하면 삭제하기
+function deleteProduct(id, callback) {
+    connection.query(`DELETE from store WHERE id=${id}`, (err) => {
+        if (err) throw err;
+        callback();
+    });
+}
+//================================================================
+//store2=================================================
+//상품를 입력할때
+function insertProduct2(password, img, p_name, p_store, p_detail, price, category, callback) {
+    connection.query(
+        `insert into store2 (password, product_name, store_name, product_detail, product_img, price ,category ) values (${password}, '${p_name}','${p_store}', '${p_detail}','${img}','${price}','${category}' )`,
+        (err) => {
+            if (err) throw err;
+            callback();
+        }
+    );
+}
+//메모를 추출할때
+function getProduct2(callback) {
+    connection.query("SELECT * FROM store2 ORDER BY id", (err, rows) => {
+        if (err) throw err;
+        callback(rows);
+    });
+}
+//================================================================notice=============
 //메모를 추출할때
 function getNotice(callback) {
     connection.query("SELECT * FROM seomoon_db ORDER BY id", (err, rows) => {
@@ -78,4 +142,11 @@ module.exports = {
     accountInfo,
     createAccount,
     loginAccount,
+    insertProduct,
+    getProduct,
+    insertProduct2,
+    getProduct2,
+    getProductByid,
+    updateProduct,
+    deleteProduct,
 };

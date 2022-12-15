@@ -1,0 +1,54 @@
+<main>
+    <div class="notice_write sec_wrap">
+        <a href="product_insert"><h2>PRODUCT INSERT(G)</h2></a>
+        <div class="notice_write_wrap p100_50">
+            <form action="/p_insert2" method="post" enctype="multipart/form-data">
+                <div class="grayBg">
+                    <div>
+                        <div>*는 필수 입력사항입니다</div>
+                    </div>
+                    <div>
+                        <div>PASSWORD</div>
+                        <div><input type="password" name="password" /></div>
+                    </div>
+                    <div>
+                        <div>*카테고리</div>
+                        <div>
+                            <select name="category">
+                                <option value="">--Please choose an option--</option>
+                                <option value="GOODS > CLOTHING">TECHNOLOGY</option>
+                                <option value="GOODS > ACCESSORIES">EARTH & MOON</option>
+                                <option value="GOODS > WELLNESS">PLANET</option>
+                                <option value="GOODS > LIVING">SPACE EXPLORATION</option>
+                                <option value="GOODS > ETC">HISTORY</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <div>*상품명</div>
+                        <div><input type="text" name="p_name" /></div>
+                    </div>
+                    <div>
+                        <div>*상호명</div>
+                        <div><input type="text" name="p_store" /></div>
+                    </div>
+                    <div>
+                        <div>*상품설명</div>
+                        <div><textarea name="p_detail" id="" cols="70" rows="10"></textarea></div>
+                    </div>
+                    <div>
+                        <div>상품이미지</div>
+                        <div><input type="file" name="product_img" /></div>
+                    </div>
+                    <div>
+                        <div>*상품가격</div>
+                        <div><input type="text" name="price" /></div>
+                    </div>
+                </div>
+                <div class="btn_wrap">
+                    <span class="notice_btn"><input value="SUBMIT" type="submit" /></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

@@ -48,6 +48,13 @@ h4 {
     font-size: 32px;
     font-weight: 900;
 }
+h5 {
+    font-size: 28px;
+    font-weight: 900;
+}
+p {
+    font-size: 16px;
+}
 .kr {
     font-family: "GmarketSans";
     font-weight: 900;
@@ -81,6 +88,9 @@ h4 {
     font-weight: 900;
     color: #fa6e91;
     line-height: 150px;
+}
+.about_us .first_text {
+    color: #ffe900;
 }
 .btn_wrap {
     display: flex;
@@ -129,6 +139,9 @@ h4 {
     h4 {
         font-size: 24px;
     }
+    h5 {
+        font-size: 22px;
+    }
 }
 @media (max-width: 1300px) {
     .p100 {
@@ -143,9 +156,7 @@ h4 {
     /* #main_logo {
         left: 50px;
     } */
-    .mypage_icon {
-        right: 50px;
-    }
+
     .p50 {
         padding: 25px 0;
     }
@@ -182,6 +193,13 @@ h4 {
     h4 {
         font-size: 22px;
     }
+    h5 {
+        font-size: 20px;
+        font-weight: 900;
+    }
+    p {
+        font-size: 14px;
+    }
 
     /* ==================header============= */
     .cate {
@@ -207,9 +225,9 @@ h4 {
     .p100_50 {
         padding: 25px 25px;
     }
-    p {
+    /* p {
         font-size: 14px;
-    }
+    } */
     h2 {
         /* font-size: 48px; */
         font-size: 32px;
@@ -248,5 +266,8 @@ h4 {
     }
     h4 {
         font-size: 18px;
+    }
+    p {
+        font-size: 12px;
     }
 }

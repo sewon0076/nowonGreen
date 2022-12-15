@@ -7,6 +7,7 @@ window.onload = function () {
             imageScrolling();
         });
     } else {
+        mainLogo.style.transition = "none";
         subHeader();
     }
     // if (window.location.href == "http://127.0.0.1:3000/") {
