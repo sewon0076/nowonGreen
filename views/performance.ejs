@@ -1,6 +1,15 @@
 <main>
     <div class="event performance">
         <div class="sec1">
+            <div class="swiper eventSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/video1.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/video2.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/video3.jpg" alt=""></div>
+                  
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
         <div class="sec2 p100">
             <div class="sec_wrap">
@@ -19,7 +28,7 @@
                             <span></span>
                         </div>
                         <div>
-                            <h5 class="k4">참가 신청</h5>
+                            <h5 class="kr">참가 신청</h5>
                             <span></span>
                         </div>
                     </div>
@@ -36,3 +45,24 @@
         </div>
     </div>
 </main>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".eventSwiper", {
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+          delay: 1200,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // },
+      });
+    </script>

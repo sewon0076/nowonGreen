@@ -7,14 +7,20 @@ window.onload = function () {
             imageScrolling();
         });
     } else {
-        mainLogo.style.transition = "none";
-        subHeader();
+        if(location.pathname == "/performance" || location.pathname == "/promotion"){
+            mainLogo.style.transition = "none";
+            header.classList.remove("scroll");
+            mainLogo.classList.add("scroll");
+            window.addEventListener("scroll", (event) => {
+                subHeader();
+            });
+        }else{
+            mainLogo.classList.add("scroll");
+            header.classList.add("scroll");
+            mainLogo.style.transition = "none";
+        }
+
     }
-    // if (window.location.href == "http://127.0.0.1:3000/") {
-    //     // logoScroll();
-    // } else {
-    //     return;
-    // }
 };
 
 let m_btn = document.querySelector(".cate_btn");
@@ -63,9 +69,13 @@ function logoScroll() {
     }
 }
 function subHeader() {
-    header.classList.add("scroll");
-    mainLogo.classList.add("scroll");
-    // document.getElementsByClassName("scroll").style = "transition:none";
+    if (window.scrollY < vh - 100) {
+        header.classList.remove("scroll");
+        mainLogo.classList.add("scroll");
+    }else if(window.scrollY > vh - 100){
+        header.classList.add("scroll"); 
+        mainLogo.classList.add("scroll");
+    }
 }
 
 let textWrap = document.querySelector(".main_sec5");

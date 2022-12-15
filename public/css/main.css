@@ -941,40 +941,7 @@ element.style {
     text-align: center;
     line-height: 100px;
 }
-/* ================footer================= */
-.f_logos {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    border-bottom: 1px solid #242d3c;
-}
-.f_logos > div > ul {
-    display: flex;
-    gap: 20px;
-}
-.sns li {
-    width: 40px;
-    height: 40px;
-}
-.sns img {
-    width: 100%;
-}
-.insti li {
-    width: 103px;
-    height: 40px;
-}
-.insti img {
-    width: 100%;
-}
-.f_bottom {
-    padding: 20px 0;
-}
-.f_bottom > p {
-    text-align: center;
-}
+
 /* 
 @media (max-width: 1510px) {
 	#main_logo {
