@@ -36,7 +36,7 @@ router.get("/notice_write", (req, res) => {
     res.render("notice_write");
 });
 //노티스 적는 페이지의 폼 받아 노티스 리스트로 다시 보내기
-router.post("/notice_write_info", (req, res) => {
+router.post("/p_insert", (req, res) => {
     let param = JSON.parse(JSON.stringify(req.body));
     let title = param["title"];
     let name = param["userId"];
