@@ -1,9 +1,9 @@
 var mysql = require("mysql");
 var connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "1234",
-    database: "seomoon_notice",
+    host: "us-cdbr-east-06.cleardb.net",
+    user: "b87cd86400fb20",
+    password: "790542bc",
+    database: "heroku_550983ce66afdef",
     multipleStatements: true, //데이터 여러개 넣는것
 });
 connection.connect(function (err) {
