@@ -264,6 +264,12 @@ p {
     .mypage_icon {
         display: none;
     }
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-weight: 700;
+    }
     h4 {
         font-size: 18px;
     }
