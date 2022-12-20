@@ -265,6 +265,9 @@ p {
     .mypage_icon {
         display: none;
     }
+    .first_text {
+        font-weight: 700;
+    }
     h2,
     h3,
     h4,
