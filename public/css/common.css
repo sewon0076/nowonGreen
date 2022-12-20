@@ -1,6 +1,7 @@
 @import url(reset.css);
+
 * {
-    font-family: "Gill Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 18px;
 }
 .p100 {
@@ -268,7 +269,7 @@ p {
     h3,
     h4,
     h5 {
-        font-weight: 700;
+        font-weight: 800;
     }
     h4 {
         font-size: 18px;
