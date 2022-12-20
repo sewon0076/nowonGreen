@@ -1,9 +1,9 @@
 var mysql = require("mysql");
 var connection = mysql.createConnection({
-    host: "us-cdbr-east-06.cleardb.net",
-    user: "b87cd86400fb20",
-    password: "790542bc",
-    database: "heroku_550983ce66afdef",
+    host: "test.cqi8uofs7gi9.ap-northeast-1.rds.amazonaws.com",
+    user: "root",
+    password: "jina1012",
+    database: "seomoon_db",
     multipleStatements: true, //데이터 여러개 넣는것
 });
 connection.connect(function (err) {
@@ -75,14 +75,14 @@ function getProduct2(callback) {
 //================================================================notice=============
 //메모를 추출할때
 function getNotice(callback) {
-    connection.query("SELECT * FROM seomoon_db ORDER BY id", (err, rows) => {
+    connection.query("SELECT * FROM notice ORDER BY id", (err, rows) => {
         if (err) throw err;
         callback(rows);
     });
 }
 //메모를 입력할때
 function insertNotice(title, name, content, callback) {
-    connection.query(`insert into seomoon_db (create_time, name,title,content) values (NOW(), '${name}','${title}','${content}')`, (err) => {
+    connection.query(`insert into notice (create_time, name,title,content) values (NOW(), '${name}','${title}','${content}')`, (err) => {
         if (err) throw err;
         callback();
     });
@@ -91,21 +91,21 @@ function insertNotice(title, name, content, callback) {
 //아이디는 프라이머리 키로 공통된 숫자 불가능
 function getNoticeByid(id, callback) {
     //한줄을 다 불러올때는 from + 'table 이름" + 없음
-    connection.query(`SELECT * FROM seomoon_db where id=${id}`, (err, row) => {
+    connection.query(`SELECT * FROM notice where id=${id}`, (err, row) => {
         if (err) throw err;
         callback(row);
     });
 }
 //아이디가 일치하는 부분을 update한 내용 내보내기
 function updateNotice(id, title, name, content, callback) {
-    connection.query(`UPDATE seomoon_db set create_time=now(), name='${name}',title='${title}',content='${content}' where id=${id}`, (err) => {
+    connection.query(`UPDATE notice set create_time=now(), name='${name}',title='${title}',content='${content}' where id=${id}`, (err) => {
         if (err) throw err;
         callback();
     });
 }
 //아이디가 일치하면 삭제하기
 function deleteNotice(id, callback) {
-    connection.query(`DELETE from seomoon_db WHERE id=${id}`, (err) => {
+    connection.query(`DELETE from notice WHERE id=${id}`, (err) => {
         if (err) throw err;
         callback();
     });
@@ -113,21 +113,21 @@ function deleteNotice(id, callback) {
 //로그인 회원가입 페이지=============================================
 //회원정보를 받아올때
 function accountInfo(callback) {
-    connection.query("SELECT * FROM seomoonaccount", (err, rows) => {
+    connection.query("SELECT * FROM seomoon_account", (err, rows) => {
         if (err) throw err;
         callback(rows);
     });
 }
 //받아온 회원정보를 입력할때
 function createAccount(id, pw, confirmPw, phoneNum, callback) {
-    connection.query(`insert into seomoonaccount (id, pw, confirmPw, phoneNum) values ('${id}','${pw}','${confirmPw}','${phoneNum}')`, (err) => {
+    connection.query(`insert into seomoon_account (id, pw, confirmPw, phoneNum) values ('${id}','${pw}','${confirmPw}','${phoneNum}')`, (err) => {
         if (err) throw err;
         callback();
     });
 }
 //login
 function loginAccount(id, pw, callback) {
-    connection.query(`SELECT * FROM seomoonaccount where id='${id}' and pw='${pw}'`, (err, results) => {
+    connection.query(`SELECT * FROM seomoon_account where id='${id}' and pw='${pw}'`, (err, results) => {
         if (err) throw err;
         callback(results);
     });

@@ -603,7 +603,10 @@ element.style {
 .event_main_Swiper .event_img {
     width: 100%;
     padding-top: 51.0204%;
-    background-color: #242d3c;
+    /* background-color: #242d3c; */
+    background-image: url(../img/adv1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .main_sec3 .swiperButton {
     width: 100%;

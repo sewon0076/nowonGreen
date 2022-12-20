@@ -3,6 +3,7 @@
         <a href="product_insert"><h2>PRODUCT UPDATE</h2></a>
         <div class="notice_write_wrap p100_50">
             <form action="/p_rewrite" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="<%= row.id %>" />
                 <div class="grayBg">
                     <div>
                         <div>*는 필수 입력사항입니다</div>
