@@ -544,7 +544,7 @@ element.style {
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: space-between;
     gap: 50px;
 }
@@ -771,27 +771,44 @@ element.style {
     justify-content: center;
 }
 .food > div {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
+    width: 20%;
 }
 .food > div > img {
     width: 100%;
+    height: auto;
 }
 .food.food1 {
-    gap: 50%;
+    justify-content: space-between;
+}
+.food.food1 > div:nth-child(1) {
+    transform: translateY(80%);
+}
+.food.food1 > div:nth-child(2) {
+    transform: translateY(-80%);
 }
 .food.food2 {
-    gap: 25%;
+    gap: 12%;
+}
+.food.food2 > div:nth-child(1) {
+    transform: translateX(40%) translateY(100%);
+}
+.food.food2 > div:nth-child(2) {
+    transform: translateY(-100%);
 }
 .food.food3 {
-    margin-right: 10%;
-    width: 90%;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: space-between;
+}
+.food.food3 > div:nth-child(1) {
+    transform: translateY(50%);
 }
 .food.food4 {
-    margin-left: 25%;
-    width: 75%;
+    width: 100%;
     justify-content: space-between;
+}
+.food.food4 > div:nth-child(1) {
+    transform: translateX(120%) translateY(-50%);
 }
 
 /* ======================sec6========== */
@@ -1146,13 +1163,14 @@ element.style {
     }
 
     /* =================sec3================= */
-    .event_content {
+    .event_main_Swiper .event_content {
         width: 100%;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        height: 150px;
     }
-    .event_img_wrap {
+    .event_main_Swiper .event_img_wrap {
         width: 100%;
         height: auto;
     }
