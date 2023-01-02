@@ -69,7 +69,7 @@ router.get("/product_update", (req, res) => {
 });
 router.get("/updateP", (req, res) => {
     let id = req.query.id;
-    console.log(id);
+    console.log("id = " + id);
     //getMemobyId는 그냥 지어준 이름
     db.getProductByid(id, (row) => {
         res.render("product_update", { row: row[0] });
@@ -78,7 +78,8 @@ router.get("/updateP", (req, res) => {
 router.post("/p_rewrite", upload.single("product_img"), (req, res) => {
     let param = JSON.parse(JSON.stringify(req.body));
     let img = "uploads/" + req.file.filename;
-    let id = req.query.id;
+    let id = param["id"];
+    console.log("ID====>" + id);
     let password = param["password"];
     let p_name = param["p_name"];
     let p_store = param["p_store"];

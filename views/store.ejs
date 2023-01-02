@@ -54,7 +54,7 @@
                     </div>
                     <div class="fg_contents p50">
                         <% rows1.forEach((row,index)=>{%>
-                        <input type="hidden" name="id" value="<%= row.id %>" />
+                        <!-- <input type="hidden" name="id" value="<%= row.id %>" /> -->
                         <div>
                             <div class="img_wrap" onclick="javascript:location.href='/product_d?id=<%= row.id %>'">
                                 <img src="<%= row.product_img %>" alt="" />
@@ -71,7 +71,7 @@
                         </div>
                         <% }); %>
                     </div>
-                    <div class="button"><a href="">button</a></div>
+                    <div class="button"><a href="">MORE</a></div>
                 </div>
                 <div class="goods">
                     <div class="fg_title">
@@ -104,7 +104,7 @@
                         </div>
                         <% }); %>
                     </div>
-                    <div class="button"><a href="">button</a></div>
+                    <div class="button"><a href="">MORE</a></div>
                 </div>
             </div>
         </div>

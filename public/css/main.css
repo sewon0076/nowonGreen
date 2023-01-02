@@ -51,22 +51,6 @@ h4 {
 	font-weight: 900;
 	letter-spacing: -0.03em;
 } */
-.button {
-    width: 185px;
-}
-.button > a {
-    background-color: #242d3c;
-    width: 100%;
-    font-size: 18px;
-    font-weight: 900;
-    color: #fefefe;
-    display: flex;
-    align-items: center;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    line-height: 60px;
-}
 
 .header_wrap {
     width: 100%;
@@ -317,35 +301,68 @@ h4 {
 /* ===============mobile_gnb============= */
 .mobile_gnb.onClick {
     transform: translateX(0%);
-    transition: 0.7s;
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.1s;
 }
+
 .mobile_gnb {
-    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.1s;
+    z-index: 1000;
+}
+.mobile_gnb .wrap {
+    padding: 100px 20px 0;
+    box-sizing: border-box;
     max-width: 300px;
     min-width: 200px;
     width: 30%;
-    min-height: 100vh;
+    height: 100%;
     background-color: #242d3c;
     position: absolute;
     top: 0;
     right: 0;
-    transform: translateX(130%);
-    padding: 100px 20px 0;
-    box-sizing: border-box;
 }
 .mobile_gnb_btn {
     margin-left: -75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 35px;
     height: 35px;
-    background-color: #242d3c;
     transform: translateY(-200%);
 }
-/* .mobile_gnb_btn > div {
-    width: 100%;
-    height: 5px;
-    background-color: #242d3c;
-    transform: rotateX('90deg');
-} */
+.mobile_gnb_btn span {
+    width: 35px;
+    height: 4px;
+    background-color: #fefefe;
+    transition: 0.5s;
+}
+.mobile_gnb_btn:hover {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.mobile_gnb_btn:hover span {
+    transition: 0.5s;
+}
+.mobile_gnb_btn:hover span:nth-child(1) {
+    position: absolute;
+    bottom: 0;
+    transform: rotate(45deg) translateX(-29%) translateY(-260%);
+}
+.mobile_gnb_btn:hover span:nth-child(2) {
+    transform: rotate(-45deg);
+}
+.mobile_gnb_btn:hover span:nth-child(3) {
+    display: none;
+}
 .mobile_gnb ul {
     width: 100%;
 }
@@ -364,7 +381,7 @@ h4 {
     top: 0;
     right: 0;
 }
-.mobile_gnb > ul > li a {
+.mobile_gnb ul > li a {
     font-size: 20px;
     font-weight: 900;
     color: #fefefe;
@@ -510,7 +527,7 @@ element.style {
 .feature_content_wrap {
     width: 100%;
 }
-.swiper.eventSwiper {
+.swiper.event_main_Swiper {
     width: 100%;
     height: 100%;
     position: relative;
@@ -519,7 +536,7 @@ element.style {
 element.style {
     width: auto;
 }
-.eventSwiper .swiper-slide {
+.event_main_Swiper .swiper-slide {
     height: auto;
     text-align: center;
     font-size: 18px;
@@ -539,35 +556,35 @@ element.style {
     -webkit-align-items: center;
     align-items: center;
 }
-.eventSwiper_wrap {
+.event_main_Swiper_wrap {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: space-between;
     gap: 50px;
 }
-.event_content {
+.event_main_Swiper .event_content {
     width: calc(32% - 50px);
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
-.event_content h4 {
+.event_main_Swiper .event_content h4 {
     text-align: left;
 }
-.event_content h3 {
+.event_main_Swiper .event_content h3 {
     text-align: left;
 }
-.event_detail {
+.event_main_Swiper .event_detail {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
 }
-.event_detail p {
+.event_main_Swiper .event_detail p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -586,8 +603,7 @@ element.style {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
-.event_content .button > a {
-    background-color: #ffe900;
+.event_main_Swiper .event_content .button > a {
     width: 100%;
     color: #242d3c;
     display: flex;
@@ -596,14 +612,17 @@ element.style {
     text-align: center;
     justify-content: center;
 }
-.event_img_wrap {
+.event_main_Swiper .event_img_wrap {
     width: 68%;
     height: auto;
 }
-.event_img {
+.event_main_Swiper .event_img {
     width: 100%;
     padding-top: 51.0204%;
-    background-color: #242d3c;
+    /* background-color: #242d3c; */
+    background-image: url(../img/adv1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .main_sec3 .swiperButton {
     width: 100%;
@@ -650,7 +669,6 @@ element.style {
     color: #ffe900;
 }
 .seller .button > a {
-    background-color: #ffe900;
     color: #242d3c;
 }
 .main_sec4 .sec4_left {
@@ -768,27 +786,44 @@ element.style {
     justify-content: center;
 }
 .food > div {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
+    width: 20%;
 }
 .food > div > img {
     width: 100%;
+    height: auto;
 }
 .food.food1 {
-    gap: 50%;
+    justify-content: space-between;
+}
+.food.food1 > div:nth-child(1) {
+    transform: translateY(80%);
+}
+.food.food1 > div:nth-child(2) {
+    transform: translateY(-80%);
 }
 .food.food2 {
-    gap: 25%;
+    gap: 12%;
+}
+.food.food2 > div:nth-child(1) {
+    transform: translateX(40%) translateY(100%);
+}
+.food.food2 > div:nth-child(2) {
+    transform: translateY(-100%);
 }
 .food.food3 {
-    margin-right: 10%;
-    width: 90%;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: space-between;
+}
+.food.food3 > div:nth-child(1) {
+    transform: translateY(50%);
 }
 .food.food4 {
-    margin-left: 25%;
-    width: 75%;
+    width: 100%;
     justify-content: space-between;
+}
+.food.food4 > div:nth-child(1) {
+    transform: translateX(120%) translateY(-50%);
 }
 
 /* ======================sec6========== */
@@ -825,7 +860,6 @@ element.style {
     color: #fefefe;
 }
 .bingo_text > .button > a {
-    background-color: #ffe900;
     color: #242d3c;
 }
 .bingo_game_wrap {
@@ -1143,13 +1177,14 @@ element.style {
     }
 
     /* =================sec3================= */
-    .event_content {
+    .event_main_Swiper .event_content {
         width: 100%;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        height: 150px;
     }
-    .event_img_wrap {
+    .event_main_Swiper .event_img_wrap {
         width: 100%;
         height: auto;
     }
