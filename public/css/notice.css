@@ -148,22 +148,23 @@ body {
     font-size: 14px;
 }
 .notice_gnb {
+    position: relative;
     width: 100%;
     display: flex;
-    gap: 30px;
     justify-content: center;
+    margin-top: 25px;
 }
 
 .number_list {
     position: relative;
-    width: 33.333%;
     display: flex;
+    gap: 10px;
 }
 .number_list > ul.swiper-pagination {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    padding: 0 60px;
+    gap: 15px;
+    /* padding: 0 60px; */
     box-sizing: border-box;
     position: relative;
     text-align: center;
@@ -193,7 +194,6 @@ body {
 }
 .number_list .prev,
 .number_list .next {
-    position: absolute;
     width: 35px;
     height: 35px;
     cursor: pointer;
@@ -202,14 +202,14 @@ body {
     justify-content: center;
 }
 
-.number_list .prev {
+/* .number_list .prev {
     top: 0;
     left: 0;
 }
 .number_list .next {
     top: 0;
     right: 0;
-}
+} */
 .number_list .prev:after,
 .number_list .next:after {
     font-size: 18px;
@@ -251,4 +251,8 @@ body {
 .swiper-pagination-bullet-active {
     color: #fff;
     background: #007aff;
+}
+.noticePage .notice_gnb .btn_wrap {
+    position: absolute;
+    right: 0;
 }

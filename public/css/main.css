@@ -51,22 +51,6 @@ h4 {
 	font-weight: 900;
 	letter-spacing: -0.03em;
 } */
-.button {
-    width: 185px;
-}
-.button > a {
-    background-color: #242d3c;
-    width: 100%;
-    font-size: 18px;
-    font-weight: 900;
-    color: #fefefe;
-    display: flex;
-    align-items: center;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    line-height: 60px;
-}
 
 .header_wrap {
     width: 100%;
@@ -317,35 +301,68 @@ h4 {
 /* ===============mobile_gnb============= */
 .mobile_gnb.onClick {
     transform: translateX(0%);
-    transition: 0.7s;
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.1s;
 }
+
 .mobile_gnb {
-    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.1s;
+    z-index: 1000;
+}
+.mobile_gnb .wrap {
+    padding: 100px 20px 0;
+    box-sizing: border-box;
     max-width: 300px;
     min-width: 200px;
     width: 30%;
-    min-height: 100vh;
+    height: 100%;
     background-color: #242d3c;
     position: absolute;
     top: 0;
     right: 0;
-    transform: translateX(130%);
-    padding: 100px 20px 0;
-    box-sizing: border-box;
 }
 .mobile_gnb_btn {
     margin-left: -75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 35px;
     height: 35px;
-    background-color: #242d3c;
     transform: translateY(-200%);
 }
-/* .mobile_gnb_btn > div {
-    width: 100%;
-    height: 5px;
-    background-color: #242d3c;
-    transform: rotateX('90deg');
-} */
+.mobile_gnb_btn span {
+    width: 35px;
+    height: 4px;
+    background-color: #fefefe;
+    transition: 0.5s;
+}
+.mobile_gnb_btn:hover {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.mobile_gnb_btn:hover span {
+    transition: 0.5s;
+}
+.mobile_gnb_btn:hover span:nth-child(1) {
+    position: absolute;
+    bottom: 0;
+    transform: rotate(45deg) translateX(-29%) translateY(-260%);
+}
+.mobile_gnb_btn:hover span:nth-child(2) {
+    transform: rotate(-45deg);
+}
+.mobile_gnb_btn:hover span:nth-child(3) {
+    display: none;
+}
 .mobile_gnb ul {
     width: 100%;
 }
@@ -364,7 +381,7 @@ h4 {
     top: 0;
     right: 0;
 }
-.mobile_gnb > ul > li a {
+.mobile_gnb ul > li a {
     font-size: 20px;
     font-weight: 900;
     color: #fefefe;
@@ -587,7 +604,6 @@ element.style {
     -webkit-box-orient: vertical;
 }
 .event_main_Swiper .event_content .button > a {
-    background-color: #ffe900;
     width: 100%;
     color: #242d3c;
     display: flex;
@@ -653,7 +669,6 @@ element.style {
     color: #ffe900;
 }
 .seller .button > a {
-    background-color: #ffe900;
     color: #242d3c;
 }
 .main_sec4 .sec4_left {
@@ -845,7 +860,6 @@ element.style {
     color: #fefefe;
 }
 .bingo_text > .button > a {
-    background-color: #ffe900;
     color: #242d3c;
 }
 .bingo_game_wrap {
