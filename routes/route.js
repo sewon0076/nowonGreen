@@ -34,6 +34,9 @@ router.get("/performance", (req, res) => {
 router.get("/promotion", (req, res) => {
     res.render("promotion");
 });
+router.get("/register_store", (req, res) => {
+    res.render("register_store");
+});
 //================================store1===============================================
 router.get("/store", (req, res) => {
     db.getProduct((rows1, rows2) => {

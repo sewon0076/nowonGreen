@@ -827,44 +827,96 @@ element.style {
 }
 
 /* ======================sec6========== */
-
-.bingo_wrap {
+.textMarquee_wrap2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-20%);
+    right:-15px;
+    z-index: -500;
+}
+.textMarquee2 {
+    width: calc(100vw + 50px);
+    overflow-x: hidden;
+    transform: rotate(10deg);
+}
+.cover2 {
     width: 100%;
-    box-sizing: border-box;
+    margin-bottom: 10rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+}
+.cover2:nth-child(1) {
+    /* height: 150px; */
+    padding:25px 0;
     background-color: #242d3c;
+    overflow-x: hidden;
 }
-.bingo_wrap > div {
-    width: calc(50% - 25px);
-}
-.bingo_text {
+.first_text2 {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    font-size: 60px;
+    font-weight: 900;
+    color: #f3f3f3;
+}
+.main_sec6 {
     position: relative;
 }
-.bingo_text > h2 {
-    text-align: center;
-    color: #ffe900;
-    font-size: 60px;
+.main_sec6 .sec6_wrap {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
-.bingo_text p {
-    position: absolute;
+.main_sec6 .front_box {
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #242d3c;
+    gap:25px;
+    box-sizing: border-box;
+}
+.main_sec6 .behind_box h2 {
     text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
     color: #fefefe;
 }
-.bingo_text > .button > a {
-    color: #242d3c;
+.behind_box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    left: 38%;
+    width: 36%;
+    z-index: -100;
+    transform: rotate(-10.39deg);
+    background-color: #f3f3f3;
 }
-.bingo_game_wrap {
-    height: auto;
+.behind_box > .direction{
+    width: 100%;
+    display: flex;
+    gap:15px;
+    align-items: center;
+    padding:10px 0;
+    border-bottom: 1px solid #242d3c;
+    box-sizing: border-box;
 }
+.behind_box >.direction h3{
+    color:#fa6e91
+}
+.behind_box >.direction p{
+    font-size: 70%;
+}
+.behind_box .notion{
+    margin-top:10px;
+    font-size: 9px;
+    color:rgba(0,0,0,0.6);
+}
+/* .behind_box .button{
+    margin-top: 30px;
+} */
+/* ==========bingo */
+
 .bingo_game {
     position: relative;
     width: 100%;
@@ -1231,16 +1283,14 @@ element.style {
         width: 100%;
     }
     /* =============sec6 bingo================ */
-    .bingo_wrap > div {
-        width: 100%;
+    .main_sec6 .front_box{
+        width:100%;
     }
-    .bingo_text p {
-        position: relative;
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;
-        transform: none;
-        top: 0;
+    .main_sec6 .behind_box{
+        display: none;
+    }
+    .main_sec6 .textMarquee_wrap2{
+        display: none;
     }
     /* ===============footer */
     .sns li {

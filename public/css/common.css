@@ -1,4 +1,5 @@
 @import url(reset.css);
+@import url("https://webfontworld.github.io/gmarket/GmarketSans.css");
 * {
     font-family: "Gill Sans", sans-serif;
     font-size: 18px;
@@ -267,10 +268,10 @@ p {
     .button {
         padding: 0 15px;
     }
-    .button > a {
-        font-size: 11px;
+    /* .button > a {
+        font-size: 14px;
         line-height: 30px;
-    }
+    } */
     /* ======================textMarqueee=================== */
     .cover:nth-child(1) {
         height: 100px;
