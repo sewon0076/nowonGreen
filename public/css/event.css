@@ -33,11 +33,10 @@
 }
 .event .event_posters > div{
     width:calc((100% - 100px) / 3);
-    background-color: bisque;
+    height:auto;
 }
 .event .event_posters > div>img{
     width:100%;
-    padding-top:60%;
 }
 /* ================ */
 .swiper.eventSwiper {
