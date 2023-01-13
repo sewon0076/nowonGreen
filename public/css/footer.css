@@ -1,16 +1,8 @@
-.footer{
-    background-color: #242d3c;
+.footer {
+    /* background-color: #242d3c; */
 }
-.f_logos {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    border-bottom: 1px solid #ffffff;
-}
-.f_logos > div > ul {
+
+.footer ul {
     display: flex;
     gap: 20px;
 }
@@ -21,8 +13,17 @@
 .sns img {
     width: 100%;
 }
+.insti {
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #242d3c;
+    box-sizing: border-box;
+}
+.insti ul {
+    justify-content: center;
+    gap: 20px;
+}
 .insti li {
-    padding: 0 5px;
     box-sizing: border-box;
     background-color: #ffffff;
 }
@@ -41,7 +42,6 @@
     text-align: center;
     color: #ffffff;
 }
-
 
 @media (max-width: 1300px) {
     .f_logos.p100 {
