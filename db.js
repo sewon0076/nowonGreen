@@ -2,7 +2,7 @@ var mysql = require("mysql");
 var connection = mysql.createConnection({
     host: "test.cqi8uofs7gi9.ap-northeast-1.rds.amazonaws.com",
     user: "root",
-    password: "jina1012",
+    password: "sewon0076",
     database: "seomoon_db",
     multipleStatements: true, //데이터 여러개 넣는것
 });
