@@ -222,7 +222,7 @@ main {
 }
 .gnb > ul > li > a {
     font-size: 18px;
-    font-weight: 900;
+    font-weight: 700;
     color: #fefefe;
 }
 .header_wrap .drop:hover > a {
@@ -233,7 +233,7 @@ main {
 }
 .header_wrap.scroll .gnb > ul > li > a {
     font-size: 18px;
-    font-weight: 900;
+    font-weight: 700;
     color: #242d3c;
 }
 .header_wrap.scroll .dropdown > a {
@@ -385,7 +385,7 @@ main {
 }
 .mobile_gnb ul > li a {
     font-size: 20px;
-    font-weight: 900;
+    font-weight: 700;
     color: #fefefe;
     position: relative;
     line-height: 60px;
@@ -540,7 +540,7 @@ element.style {
 .main_sec3 .t_first {
     display: flex;
     font-size: 50px;
-    font-weight: 900;
+    font-weight: 700;
     color: #fa6e91;
     line-height: 1.5;
 }

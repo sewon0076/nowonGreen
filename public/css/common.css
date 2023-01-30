@@ -40,18 +40,18 @@
 }
 h2 {
     font-size: 48px;
-    font-weight: 900;
+    font-weight: 700;
 }
 h3 {
     font-size: 46px;
 }
 h4 {
     font-size: 32px;
-    font-weight: 900;
+    font-weight: 700;
 }
 h5 {
     font-size: 28px;
-    font-weight: 900;
+    font-weight: 700;
 }
 p {
     font-size: 22px;
@@ -102,7 +102,7 @@ p {
 .button > a {
     width: 100%;
     font-size: 18px;
-    font-weight: 900;
+    font-weight: 700;
     color: #fefefe;
     display: flex;
     align-items: center;
@@ -126,7 +126,6 @@ p {
     }
     h2 {
         font-size: 40px;
-        font-weight: 900;
     }
     h3 {
         font-size: 38px;
@@ -138,7 +137,7 @@ p {
         font-size: 22px;
     }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1440px) {
     .p100 {
         padding: 0 50px;
     }
@@ -177,7 +176,6 @@ p {
     h2 {
         /* font-size: 48px; */
         font-size: 35px;
-        font-weight: 900;
     }
     .bingo_text > h2 {
         font-size: 42px;
@@ -190,7 +188,6 @@ p {
     }
     h5 {
         font-size: 20px;
-        font-weight: 900;
     }
     p {
         font-size: 14px;
@@ -226,7 +223,7 @@ p {
     h2 {
         /* font-size: 48px; */
         font-size: 32px;
-        font-weight: 900;
+
     }
     h3 {
         font-size: 24px;
