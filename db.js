@@ -125,6 +125,13 @@ function createAccount(id, pw, confirmPw, phoneNum, callback) {
         callback();
     });
 }
+
+// function getinformId(id, callback) {
+//     connection.query(`SELECT * FROM seomoon_account where id=${id}`, (err, row) => {
+//         if (err) throw err;
+//         callback(row);
+//     });
+// }
 //login
 function loginAccount(id, pw, callback) {
     connection.query(`SELECT * FROM seomoon_account where id='${id}' and pw='${pw}'`, (err, results) => {
@@ -149,4 +156,5 @@ module.exports = {
     getProductByid,
     updateProduct,
     deleteProduct,
+    // getinformId,
 };

@@ -207,6 +207,11 @@ router.get("/sign_up", (req, res) => {
         res.render("sign_up", { rows: rows }); //ejs의 rows를 받아서 rows라는 이름으로 보낸다
     });
 });
+router.get("/result_page", (req, res) => {
+    db.getinformId((row) => {
+        res.render("result_page", { row: row[0] });
+    });
+});
 router.post("/sign_up_info", (req, res) => {
     let param = JSON.parse(JSON.stringify(req.body));
     let id = param["id"];
@@ -218,7 +223,7 @@ router.post("/sign_up_info", (req, res) => {
     console.log(confirmPw);
     console.log(phoneNum);
     db.createAccount(id, pw, confirmPw, phoneNum, () => {
-        res.redirect("/login");
+        res.send(`<script>alert('${id}님 환영합니다');document.location.href="/"</script>`);
     });
 });
 router.get("/login", (req, res) => {
