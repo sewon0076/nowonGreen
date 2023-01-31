@@ -140,7 +140,7 @@ body {
 .notice_date .date {
     color: #ffe900;
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 700;
 }
 .notice_date .month {
     display: flex;
