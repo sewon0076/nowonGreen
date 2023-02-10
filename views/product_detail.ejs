@@ -40,11 +40,20 @@
                     </div>
                     <div class="bottom">
                         <p class="warning">※해당 사진은 연출을 위해 찍은것으로 상품의 실제 모습과 차이가 날 수 있습니다</p>
-                        <div class="button_wrap">
+                        <div class="button_wrap user">
                             <div class="button"><a href="">BUY IT NOW</a></div>
                             <div class="button"><a href="">ADD TO CART</a></div>
+                        </div>
+                        <div class="button_wrap admin">
                             <div class="button"><a onclick="javascript:location.href='/updateP?id=<%= row.id %>'">MODIFY</a></div>
                             <div class="button"><a onclick="javascript:location.href='/deleteP?id=<%= row.id %>'">DELETE</a></div>
+                        </div>
+                        <div class="admin_wrap">
+                            <p>USER</p>
+                            <div class="btn_bg">
+                                <p>MANAGER</p>
+                            </div>
+                            <div class="admin_btn"></div>
                         </div>
                     </div>
                 </div>
@@ -52,3 +61,14 @@
         </div>
     </div>
 </main>
+<script>
+    let btn = document.querySelector(".admin_wrap");
+    let admin = btn.previousElementSibling;
+    let user = admin.previousElementSibling;
+    console.log("btn2===" + admin);
+    btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        admin.classList.toggle("active");
+        user.classList.toggle("active");
+    });
+</script>
